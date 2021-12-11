@@ -155,6 +155,9 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
   text-align: center;
 }
 
+.github, .twitter, .linkedin {
+  text-decoration: none;
+}
 /*Setting the default width of ALL elements to include the padding and the border using box-sixing property and border-box value to make planning layout simpler. Use * as universal selector*/
 
 * {
