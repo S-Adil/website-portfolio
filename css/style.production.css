@@ -1,0 +1,399 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*
+Colors used
+
+Text Color (Dark Mauve): #6c4a4a;
+Background Color (Light grey): #ededed;
+Banner Color (baby-Pink): #ddbebe;
+Primary color (maroon-magenta): #852747;
+Secondary Color (Tea pink): #c89595;
+*/
+
+body {
+  background-color: #ededed;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #6c4a4a;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+  font-weight: 800;
+}
+
+h1 {
+  font-size:30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a {
+  color: #852747;
+}
+
+a:visited {
+  /*visited link*/
+  color: purple;
+}
+
+a:hover, a:focus {
+  /*No underlining when hovering over a link*/
+  text-decoration: none;
+}
+
+a:active {
+  color: brown;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+button {
+  /* overwrites browser defaults and resets the border*/
+  border: none;
+  display: inline-block;
+  /*takes the font from outer container, in this case 'source sans pro'*/
+  font-family: inherit;
+  /*primary color for button (maroon-magenta)*/
+  background-color: #ddbebe;
+  /*color of text within the button*/
+  color: white;
+  text-decoration: none;
+  /* adds spacing to the button of 10 pixels */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format. 0.3 for opacity*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    /*needs to be added to the default state of an element, so that's why it's here instead of at button:hover etc.*/
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  /*this format is: transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
+}
+
+.button {
+  /* overwrites browser defaults and resets the border*/
+  border: none;
+  display: inline-block;
+  /*takes the font from outer container, in this case 'source sans pro'*/
+  font-family: inherit;
+  /*primary color for button (maroon-magenta)*/
+  background-color: #ddbebe;
+  /*color of text within the button*/
+  color: white;
+  text-decoration: none;
+  /* adds spacing to the button of 10 pixels */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format. 0.3 for opacity*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    /*needs to be added to the default state of an element, so that's why it's here instead of at button:hover etc.*/
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  /*this format is: transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
+}
+
+.random-button {
+  color: #852747;
+  font-weight: 700;
+}
+
+button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, .random-button:focus {
+  /*cursor changes to pointer when the mouse hovers over button*/
+  cursor: pointer;
+  /*button becomes lighter when cursor hovers over button, more of background shows through*/
+  opacity: 0.8;
+
+}
+
+/* Changing the placement of the portrait image and resizing it */
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+/* Centering profile content */
+
+.profile {
+  max-width: 700px;
+  /* No spacing to top and bottom and auto-spacing to left and right, which centres the container horizontally*/
+  margin: 0 auto;
+}
+
+.page-footer {
+  clear:both;
+  /*giving one-dimensional column layout to footer section*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*Getting "find me on" on top of the icons*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*Centering "find me on" text and any inline & inline-block elements*/
+  text-align: center;
+}
+
+/*Setting the default width of ALL elements to include the padding and the border using box-sixing property and border-box value to make planning layout simpler. Use * as universal selector*/
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*giving header a Flexbox layout*/
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+  width: 200px;
+  height: 70px;
+}
+
+/*target navigation and have it take up the rest of the container along with being right aligned*/
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+/*getting rid of those dots*/
+
+.navigation-list {
+  list-style-type: none;
+}
+
+/*targetting list items and aligning them in a row (inline-block) and give them some space in-between them*/
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.about-main {
+  text-align: center;
+  padding: 20px;
+}
+.about-main__interests {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.experience-summary-section {
+text-align: center;
+}
+
+.experience-summary {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Time to play with some grid stuff */
+
+/* Creating the fallback code for grid display in case browser is too old to support CSS Grid property */
+
+.grid__item{
+  display: inline-block;
+  width: 33%
+}
+/* End grid fallback code */
+
+/* Sending a message for feature detection that looks like a media querry (to @supports )*/
+
+@supports (display: grid) {
+  .grid {
+    /* Start CSS grid property code */
+    display: -ms-grid;
+    display: grid;
+    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+
+  /* Adding color to the grid items */
+  .grid__item {
+    background-color: #ddbebe;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .grid__item:last-child {
+    -ms-grid-column: 3;
+    grid-column: 3/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+}
+
+/* Adding some animations now */
+
+/* This is for the sun animation */
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill:#f76414;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill:#f76414;
+  }
+}
+
+.sun {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+/* Or you could also write it like this:
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+} */
+
+/* Now we're going to animate the clouds. First we create the function, then apply the function to the clouds */
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0,50px);
+            transform: translate(0,50px);
+  }
+  to {
+    -webkit-transform: translate(200px,50px);
+            transform: translate(200px,50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0,50px);
+            transform: translate(0,50px);
+  }
+  to {
+    -webkit-transform: translate(200px,50px);
+            transform: translate(200px,50px);
+  }
+}
+
+.cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
+}
+
+/* Now for the cloud in the back */
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite
+  alternate linear;
+          animation: 34s cloud-move-reverse infinite
+  alternate linear;
+}
+/* Adding media queries for a more responsive page at the end */
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* This part of the code combines allshared code between the 3 media queries. Pay attention to the conditions and the set up of the code. */
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
