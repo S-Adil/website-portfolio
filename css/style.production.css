@@ -79,7 +79,7 @@ button {
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format. 0.3 for opacity*/
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    /*needs to be added to the default state of an element, so that's why it's here instead of at button:hover etc.*/
+  /*needs to be added to the default state of an element, so that's why it's here instead of at button:hover etc.*/
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
   /*this format is: transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
@@ -101,7 +101,7 @@ button {
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format. 0.3 for opacity*/
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    /*needs to be added to the default state of an element, so that's why it's here instead of at button:hover etc.*/
+  /*needs to be added to the default state of an element, so that's why it's here instead of at button:hover etc.*/
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
   /*this format is: transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
@@ -147,8 +147,8 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
   /*Getting "find me on" on top of the icons*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   /*Centering "find me on" text and any inline & inline-block elements*/
   text-align: center;
 }
@@ -160,7 +160,7 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*giving header a Flexbox layout*/
@@ -176,7 +176,7 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
 
 .page-header__item {
   -webkit-box-flex: 0;
-          flex: 0 1 250px;
+  flex: 0 1 250px;
   -ms-flex: 0 1 250px;
   -moz-flex: 1;
   width: 250px;
@@ -186,8 +186,8 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
 /*target navigation and have it take up the rest of the container along with being right aligned*/
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
@@ -213,12 +213,12 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
 }
 
 .experience-summary-section {
-text-align: center;
+  text-align: center;
 }
 
 .experience-summary {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Time to play with some grid stuff */
@@ -290,21 +290,21 @@ text-align: center;
 
 .sun {
   -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  animation-duration: 4s;
   -webkit-animation-name: color-change;
-          animation-name: color-change;
+  animation-name: color-change;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-direction: alternate;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 /* Or you could also write it like this:
 
 .sun {
-  animation: 4s color-change infinite alternate linear;
+animation: 4s color-change infinite alternate linear;
 } */
 
 /* Now we're going to animate the clouds. First we create the function, then apply the function to the clouds */
@@ -312,28 +312,28 @@ text-align: center;
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0,50px);
-            transform: translate(0,50px);
+    transform: translate(0,50px);
   }
   to {
     -webkit-transform: translate(200px,50px);
-            transform: translate(200px,50px);
+    transform: translate(200px,50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0,50px);
-            transform: translate(0,50px);
+    transform: translate(0,50px);
   }
   to {
     -webkit-transform: translate(200px,50px);
-            transform: translate(200px,50px);
+    transform: translate(200px,50px);
   }
 }
 
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
 
 /* Now for the cloud in the back */
@@ -341,31 +341,31 @@ text-align: center;
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite
   alternate linear;
-          animation: 34s cloud-move-reverse infinite
+  animation: 34s cloud-move-reverse infinite
   alternate linear;
 }
 /* Adding media queries for a more responsive page at the end */
