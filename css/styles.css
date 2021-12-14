@@ -152,9 +152,9 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
 }
 
 .page-header__item {
-  flex: 0 1 250px;
-  -ms-flex: 1;
   width: 100%;
+  flex: 0 1 200px;
+  width: 200px;
   height: 70px;
 }
 
@@ -241,7 +241,7 @@ text-align: center;
     fill: var(--sun-animation-mid-color);
   }
   100% {
-    fill: var(--sun-animation-last-color);
+    fill:var(--sun-animation-last-color);
   }
 }
 
