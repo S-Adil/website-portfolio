@@ -152,7 +152,6 @@ button:hover, button:focus, .button:hover, .button:focus, .random-button:hover, 
 }
 
 .page-header__item {
-  width: 100%;
   flex: 0 1 200px;
   width: 200px;
   height: 70px;
